@@ -12,11 +12,8 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem "stock_quote", '~> 2.0.0'
-<<<<<<< HEAD
-gem "font-awesome-rails"
-=======
 gem 'bcrypt', platforms: :ruby
->>>>>>> 7f51edf6aea2961b2d0d24787dda4d9d9556e8cc
+gem "font-awesome-rails"
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
