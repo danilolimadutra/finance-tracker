@@ -68,6 +68,8 @@ GEM
     execjs (2.7.0)
     ffi (1.9.23)
     ffi (1.9.23-x86-mingw32)
+    font-awesome-rails (4.7.0.3)
+      railties (>= 3.2, < 5.2)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)
@@ -238,6 +240,7 @@ DEPENDENCIES
   coffee-script-source (= 1.8.0)
   devise
   devise-bootstrap-views
+  font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
   pg
