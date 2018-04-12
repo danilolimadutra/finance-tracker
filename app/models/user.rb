@@ -6,8 +6,8 @@ class User < ApplicationRecord
 
  has_many :user_stocks
  has_many :stocks, through: :user_stocks
- has_many :Friendships
- has_many :friends, through: :Friendships
+ has_many :friendships
+ has_many :friends, through: :friendships
 
 def full_name
   return "#{first_name} #{last_name}".strip if (first_name || last_name)
@@ -50,5 +50,13 @@ end
 
  def self.matches(field_name, param)
    User.where("#{field_name} like ?", "%#{param}%")
+ end
+
+ def except_current_user(users)
+   users.reject { |user| user.id == self.id }
+ end
+
+ def not_friends_with?(friend_id)
+  friendships.where(friend_id: friend_id).count < 1
  end
 end
